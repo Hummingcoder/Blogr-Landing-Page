@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <article class="nav_container">
+        <img src="images/logo.svg" alt="logo" class="logo" />
+        <button class="toggle">
+          <img src="images/icon-hamburger.svg" alt="" />
+        </button>
+        <nav>
+          <section class="navlinks">
+            <div class="dropdown">
+              <button class="dropbtn">
+                Product <img src="images/icon-arrow-light.svg" alt="" />
+              </button>
+              <div class="drop_contain">
+                <a href="">Overview</a>
+                <a href="">Pricing</a>
+                <a href="">Marketplace</a>
+                <a href="">Features</a>
+                <a href="">Integrations</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">
+                Company <img src="images/icon-arrow-light.svg" alt="" />
+              </button>
+              <div class="drop_contain">
+                <a href="">About</a>
+                <a href="">Team</a>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">
+                Connect <img src="images/icon-arrow-light.svg" alt="" />
+              </button>
+              <div class="drop_contain">
+                <a href="">Contact</a>
+                <a href="">Newsletter</a>
+                <a href="">LinkedIn</a>
+              </div>
+            </div>
+          </section>
+          <section class="btn_container">
+            <button class="btn">Login</button>
+            <button class="btn">Sign Up</button>
+          </section>
+        </nav>
+      </article>
+      <article class="hero">
+        <h1>A modern <br />publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <section class="btn_container">
+          <button class="btn">Start for Free</button>
+          <button class="btn">Learn More</button>
+        </section>
+      </article>
+    </header>
+
+    <main>
+      <h2 class="main_heading">Designed for the future</h2>
+      <article class="hero_section" id="editor_section">
+        <section>
+          <div>
+            <h3>Introducing an extensible editor</h3>
+            <p>
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+          <h3>Robust content management</h3>
+          <p>
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control.
+          </p>
+        </section>
+        <img src="images/illustration-editor-desktop.svg" alt="" />
+      </article>
+      <article id="phone_section" class="hero_section">
+        <img src="images/illustration-phones.svg" alt="" />
+        <section>
+          <h2>State of the Art Infrastructure</h2>
+          <p>
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </section>
+      </article>
+      <article class="hero_section" id="laptop_section">
+        <section>
+          <div>
+            <h3>Free, open, simple</h3>
+            <p>
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+          </div>
+          <h3>Powerful tooling</h3>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </section>
+        <img
+          src="images/illustration-laptop-desktop.svg"
+          alt="illustration-laptop-desktop"
+        />
+      </article>
+    </main>
+    <footer>
+      <img src="images/logo.svg" alt="logo" />
+      <section>
+        <p>Product</p>
+        <div>
+          <a href="">Overview</a>
+          <a href="">Pricing</a>
+          <a href="">Marketplace</a>
+          <a href="">Features</a>
+          <a href="">Integrations</a>
+        </div>
+      </section>
+      <section>
+        <p>Company</p>
+        <div>
+          <a href="">About</a>
+          <a href="">Team</a>
+          <a href="">Blog</a>
+          <a href="">Careers</a>
+        </div>
+      </section>
+      <section>
+        <p>Connect</p>
+        <div>
+          <a href="">Contact</a>
+          <a href="">Newsletter</a>
+          <a href="">LinkedIn</a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

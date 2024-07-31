@@ -1,0 +1,90 @@
+:root {
+  /* Primary */
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%);
+  --very-dark-blue: hsl(208, 49%, 24%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  --very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --very-dark-black-blue: hsl(240, 10%, 16%);
+
+  /* Gradient */
+  --gradient-intro-cta-start: hsl(13, 100%, 72%);
+  --gradient-intro-cta-end: hsl(353, 100%, 62%);
+  --gradient-body-start: hsl(237, 17%, 21%);
+  --gradient-body-end: hsl(237, 23%, 32%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  border: 1px solid;
+}
+html,
+body {
+  width: 100%;
+}
+.desktop {
+  display: none;
+}
+
+header,
+main,
+footer {
+  max-width: 1440px;
+  position: relative;
+  overflow: hidden;
+}
+button {
+  background: none;
+  border: none;
+}
+.logo {
+  width: 100px;
+}
+.toggle {
+  width: 40px;
+}
+.toggle img {
+  width: 100%;
+}
+header {
+  width: 100%;
+  height: 80vh;
+  background: url(images/bg-pattern-intro-mobile.svg),
+    linear-gradient(
+      to bottom,
+      var(--gradient-intro-cta-start),
+      var(--gradient-intro-cta-end)
+    );
+  background-position: 35% 30%;
+  border-radius: 0 0 0 120px;
+  padding: 30px 1rem;
+}
+.nav_container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: none;
+}
+.hero {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white);
+  font-weight: lighter;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 8vw, 2.4rem);
+}
