@@ -16,6 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
@@ -65,8 +71,8 @@
             </div>
           </section>
           <section class="btn_container">
-            <button class="btn">Login</button>
-            <button class="btn">Sign Up</button>
+            <button class="btn" id="no_bg">Login</button>
+            <button class="btn" id="white_bg">Sign Up</button>
           </section>
         </nav>
       </article>
@@ -74,15 +80,15 @@
         <h1>A modern <br />publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
         <section class="btn_container">
-          <button class="btn">Start for Free</button>
-          <button class="btn">Learn More</button>
+          <button class="btn" id="white_bg">Start for Free</button>
+          <button class="btn" id="no_bg">Learn More</button>
         </section>
       </article>
     </header>
 
     <main>
       <h2 class="main_heading">Designed for the future</h2>
-      <article class="hero_section" id="editor_section">
+      <article class="hero_section texts_section" id="editor_section">
         <section>
           <div>
             <h3>Introducing an extensible editor</h3>
@@ -95,20 +101,37 @@
               change the looks of a blog.
             </p>
           </div>
-          <h3>Robust content management</h3>
-          <p>
-            Flexible content management enables users to easily move through
-            posts. Increase the usability of your blog by adding customized
-            categories, sections, format, or flow. With this functionality,
-            you’re in full control.
-          </p>
+          <div>
+            <h3>Robust content management</h3>
+            <p>
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
         </section>
-        <img src="images/illustration-editor-desktop.svg" alt="" />
+        <img src="images/illustration-editor-desktop.svg" alt="" class="pc" />
+        <img
+          src="images/illustration-editor-mobile.svg"
+          alt=""
+          class="mobile"
+        />
       </article>
       <article id="phone_section" class="hero_section">
-        <img src="images/illustration-phones.svg" alt="" />
+        <div class="circle_container">
+          <img src="images/bg-pattern-circles.svg" alt="" />
+        </div>
+        <img
+          src="images/illustration-phones.svg"
+          alt="illustration-phones"
+          class="phone_img"
+        />
         <section>
-          <h2>State of the Art Infrastructure</h2>
+          <h2>
+            State of the Art <br />
+            Infrastructure
+          </h2>
           <p>
             With reliability and speed in mind, worldwide data centers provide
             the backbone for ultra-fast connectivity. This ensures your site
@@ -117,7 +140,18 @@
           </p>
         </section>
       </article>
-      <article class="hero_section" id="laptop_section">
+      <article class="hero_section texts_section" id="laptop_section">
+        <img
+          src="images/illustration-laptop-mobile.svg"
+          alt="illustration-laptop-mobile"
+          class="mobile"
+        />
+        <img
+          src="images/illustration-laptop-desktop.svg"
+          alt="illustration-laptop-mobile"
+          class="pc"
+        />
+
         <section>
           <div>
             <h3>Free, open, simple</h3>
@@ -130,17 +164,15 @@
               learn.
             </p>
           </div>
-          <h3>Powerful tooling</h3>
-          <p>
-            Batteries included. We built a simple and straightforward CLI tool
-            that makes customization and deployment a breeze, but capable of
-            producing even the most complicated sites.
-          </p>
+          <div>
+            <h3>Powerful tooling</h3>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
         </section>
-        <img
-          src="images/illustration-laptop-desktop.svg"
-          alt="illustration-laptop-desktop"
-        />
       </article>
     </main>
     <footer>
