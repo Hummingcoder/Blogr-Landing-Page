@@ -6,6 +6,7 @@
 
   /* Neutral */
   --white: hsl(0, 0%, 100%);
+  --light-grayish-blue: hsl(0, 0%, 90%);
   --grayish-blue: hsl(240, 2%, 79%);
   --very-dark-grayish-blue: hsl(207, 13%, 34%);
   --very-dark-black-blue: hsl(240, 10%, 16%);
@@ -56,6 +57,7 @@ button {
   width: 100%;
 }
 header {
+  position: relative;
   width: 100%;
   height: 80vh;
   background: url(images/bg-pattern-intro-mobile.svg),
@@ -74,10 +76,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-nav {
-  display: none;
 }
 .hero {
   width: 100%;
@@ -119,6 +117,93 @@ nav {
   background: transparent;
   color: var(--white);
   border: 1px solid var(--white);
+}
+/* ---------------------- nav -------------------------- */
+
+nav {
+  position: absolute;
+  z-index: 9999;
+  width: 90%;
+  max-width: 320px;
+  background: white;
+  border: 1px solid;
+  top: 100px;
+  right: 6%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.navlinks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+}
+.dropdown {
+  width: 100%;
+}
+.drop_contain {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--light-grayish-blue);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 10px;
+}
+.drop_contain a {
+  text-decoration: none;
+  color: var(--very-dark-grayish-blue);
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav .btn_container {
+  width: 100%;
+  flex-direction: column;
+  border-top: 1px solid var(--very-dark-grayish-blue);
+  padding-top: 1.4rem;
+}
+nav .dropbtn {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+nav .dropbtn img {
+  width: 12px;
+}
+nav .btn_container button {
+  font-size: 1.2rem;
+}
+nav #no_bg {
+  width: 120px;
+  color: var(--very-dark-blue);
+  padding: 10px;
+}
+nav #white_bg {
+  width: 120px;
+  background: linear-gradient(
+    to right,
+    var(--gradient-intro-cta-start),
+    var(--gradient-intro-cta-end)
+  );
+  color: var(--white);
+  padding: 10px;
 }
 
 /* ---------------------- main -------------------------- */
@@ -302,14 +387,54 @@ footer a {
   .toggle {
     display: none;
   }
+  .logo {
+    width: 100px;
+  }
+
+  /* ----------------------------------------****NAV****-------------- */
   nav {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 2px solid;
     width: 100%;
     margin-left: 2rem;
+    position: relative;
   }
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    height: 100%;
+  }
+  .dropdown {
+    position: relative;
+    height: 100%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+  }
+  .drop_contain {
+    position: absolute;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 2rem;
+    border: 1px solid;
+    left: 0;
+    top: 100%;
+  }
+  .dropbtn {
+    font-size: 1.2rem;
+    color: var(--white);
+  }
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^****NAV****^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
   header article {
     width: 80%;
     max-width: 1240px;
@@ -408,7 +533,7 @@ footer a {
   }
   #phone_section p {
     width: fit-content;
-    max-width: 500px;
+    max-width: 430px;
   }
   #phone_section .phone_img {
     width: 480px;
@@ -468,21 +593,37 @@ footer a {
     );
     height: 400px;
     margin-top: 300px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  #phone_section .phone_img {
+    width: 550px;
+    top: -70px;
+  }
+}
+@media (width > 1380px) {
+  #phone_section {
+    background: linear-gradient(
+      to right,
+      var(--gradient-body-start),
+      var(--gradient-body-end)
+    );
+    height: 400px;
+    margin-top: 300px;
     padding: 0 14%;
     display: flex;
     align-items: center;
     justify-content: end;
   }
-  #phone_section section {
-    text-align: left;
-  }
-  #phone_section p {
-    width: fit-content;
-    max-width: 500px;
-  }
   #phone_section .phone_img {
     width: 550px;
     top: -70px;
     left: 10%;
+  }
+  #phone_section p {
+    width: fit-content;
+    max-width: 500px;
   }
 }
