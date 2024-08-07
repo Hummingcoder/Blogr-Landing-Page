@@ -23,6 +23,7 @@ dropBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     const img = btn.querySelectorAll("img");
     const drop_container = btn.nextElementSibling;
+    const pd = drop_container.style.padding;
     dropBtn.forEach((Btn) => {
       const child_img = Btn.querySelectorAll("img");
       Btn.nextElementSibling.style.height = "0";
@@ -31,16 +32,12 @@ dropBtn.forEach((btn) => {
         img.style.transform = "rotate(0deg)";
       });
     });
-
-    if (re) {
-      drop_container.style.padding = "1rem";
+    if (pd !== "16px") {
+      drop_container.style.padding = "16px";
       drop_container.style.height = "fit-content";
       img.forEach((img) => {
         img.style.transform = "rotate(180deg)";
       });
-      re = false;
-    } else {
-      re = true;
     }
   });
 });

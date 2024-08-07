@@ -461,7 +461,6 @@ a:hover {
   }
   .drop_contain a:hover,
   .drop_contain a:active {
-    font-weight: 600;
     color: var(--very-dark-black-blue);
   }
 
