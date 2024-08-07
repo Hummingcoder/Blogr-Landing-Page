@@ -503,12 +503,13 @@ a:hover {
     color: var(--light-red);
     padding: 10px;
   }
-  nav #white_bg:hover {
-    width: 120px;
+  #white_bg,
+  #no_bg {
+    transition: 0.3s ease-in-out;
+  }
+  #white_bg:hover {
     background: var(--very-light-red);
     color: var(--white);
-    padding: 10px;
-    transition: 0.3s ease-in-out;
   }
 
   /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^****NAV****^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -567,10 +568,14 @@ a:hover {
     font-size: 1rem;
   }
   .hero .btn {
-    padding: 16px 28px;
-    padding-top: 16px;
+    height: 50px;
+    width: 160px;
     font-size: 1rem;
     margin-top: 2rem;
+  }
+  .hero #no_bg:hover {
+    background: var(--white);
+    color: var(--light-red);
   }
   #editor_section {
     width: 100%;
