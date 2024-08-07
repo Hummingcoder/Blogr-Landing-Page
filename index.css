@@ -6,7 +6,7 @@
 
   /* Neutral */
   --white: hsl(0, 0%, 100%);
-  --light-grayish-blue: hsl(0, 0%, 90%);
+  --light-grayish-blue: hsl(0, 0%, 95%);
   --grayish-blue: hsl(240, 2%, 79%);
   --very-dark-grayish-blue: hsl(207, 13%, 34%);
   --very-dark-black-blue: hsl(240, 10%, 16%);
@@ -50,12 +50,32 @@ button {
 .logo {
   width: 80px;
 }
+/* --------------------------------------- toggle button start------------------------- */
 .toggle {
-  width: 30px;
+  cursor: pointer;
 }
-.toggle img {
-  width: 100%;
+.line1,
+.line2,
+.line3 {
+  background: #ffffff;
+  width: 40px;
+  height: 4px;
+  margin: 6px 0;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.toggle.show .line1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.toggle.show .line2 {
+  opacity: 0;
+}
+.toggle.show .line3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+
+/* --------------------------------------- toggle button end------------------------- */
+
 header {
   position: relative;
   width: 100%;
@@ -126,7 +146,6 @@ nav {
   width: 90%;
   max-width: 320px;
   background: white;
-  border: 1px solid;
   top: 100px;
   right: 6%;
   display: flex;
@@ -134,8 +153,15 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  padding: 2rem;
   border-radius: 20px;
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  padding: 2rem;
+  box-shadow: 0 6px 10px rgba(81, 81, 81, 0.163);
+}
+nav.hide {
+  padding: 0;
+  width: 0;
 }
 .navlinks {
   width: 100%;
@@ -160,8 +186,10 @@ nav {
   gap: 8px;
   background: var(--light-grayish-blue);
   border-radius: 10px;
-  padding: 1rem;
   margin-top: 10px;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .drop_contain a {
   text-decoration: none;
@@ -186,6 +214,7 @@ nav .dropbtn {
 }
 nav .dropbtn img {
   width: 12px;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 nav .btn_container button {
   font-size: 1.2rem;
@@ -364,6 +393,15 @@ footer a {
 .pc {
   display: none;
 }
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn {
+  cursor: pointer;
+}
+
 @media (width > 760px) {
   footer {
     grid-template-columns: repeat(2, 1fr);
@@ -371,6 +409,111 @@ footer a {
 }
 
 @media (width > 1000px) {
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^****NAV****^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+  nav {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    max-width: 100%;
+    background: transparent;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    border-radius: 20px;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: visible;
+    padding: 1rem;
+    box-shadow: none;
+  }
+  nav.hide {
+    padding: 0;
+    width: 100%;
+  }
+  .navlinks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 50px;
+    text-align: center;
+  }
+  .dropdown {
+    width: fit-content;
+    position: relative;
+  }
+  .drop_contain {
+    position: absolute;
+    overflow: hidden;
+    left: 0%;
+    min-width: fit-content;
+    align-items: start;
+  }
+  .drop_contain a {
+    text-decoration: none;
+    color: var(--very-dark-grayish-blue);
+    font-family: "Ubuntu", sans-serif;
+  }
+  .drop_contain a:hover,
+  .drop_contain a:active {
+    font-weight: 600;
+    color: var(--very-dark-black-blue);
+  }
+
+  nav .btn_container {
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    border-top: none;
+    padding-top: 0;
+  }
+  nav .dropbtn {
+    margin: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--white);
+  }
+  .dropbtn:hover {
+    text-decoration: underline;
+  }
+  nav .dropbtn img {
+    width: 12px;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  nav .btn_container button {
+    font-size: 1rem;
+  }
+  nav #no_bg {
+    width: 120px;
+    color: var(--white);
+    padding: 10px;
+    border: none;
+  }
+  nav #no_bg:hover {
+    text-decoration: underline;
+  }
+  nav #white_bg {
+    width: 120px;
+    background: var(--white);
+    color: var(--light-red);
+    padding: 10px;
+  }
+  nav #white_bg:hover {
+    width: 120px;
+    background: var(--very-light-red);
+    color: var(--white);
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+  }
+
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^****NAV****^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
   main {
     overflow: hidden;
     padding-top: 130px;
@@ -389,51 +532,8 @@ footer a {
   }
   .logo {
     width: 100px;
+    margin-right: 8vw;
   }
-
-  /* ----------------------------------------****NAV****-------------- */
-  nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid;
-    width: 100%;
-    margin-left: 2rem;
-    position: relative;
-  }
-  .navlinks {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    height: 100%;
-  }
-  .dropdown {
-    position: relative;
-    height: 100%;
-    border: 1px solid;
-    display: flex;
-    align-items: center;
-  }
-  .drop_contain {
-    position: absolute;
-    background: #ffffff;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.2rem 2rem;
-    border: 1px solid;
-    left: 0;
-    top: 100%;
-  }
-  .dropbtn {
-    font-size: 1.2rem;
-    color: var(--white);
-  }
-  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^****NAV****^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
   header article {
     width: 80%;
