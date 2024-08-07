@@ -510,6 +510,7 @@ a:hover {
   #white_bg:hover {
     background: var(--very-light-red);
     color: var(--white);
+    box-shadow: 0 4px 10px rgba(135, 28, 28, 0.164);
   }
 
   /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^****NAV****^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
